@@ -1,0 +1,8 @@
+reformat current text-block into single line or multiple lines.
+(similar to fill-region, but strickly exchange spaces with newline, or vice versa.)
+
+In the future, this package will expand to also pretty-format. That is, from single long lines of code into multiple-lines with good choice of line-breaks and also indented.
+
+home page at
+Emacs: Reformat Lines for Source Code
+http://ergoemacs.org/emacs/emacs_reformat_lines.html
