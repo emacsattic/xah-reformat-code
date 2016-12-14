@@ -1,7 +1,8 @@
-reformat current text-block into single line or multiple lines.
-(similar to fill-region, but strickly exchange spaces with newline, or vice versa.)
+Emacs commands to reformat current text-block into single line or multiple lines. (similar to fill-region, but strickly exchange spaces with newline, or vice versa.)
 
-In the future, this package will expand to also pretty-format. That is, from single long lines of code into multiple-lines with good choice of line-breaks and also indented.
+This is useful for languages that consider whitespace equivalent. For example, HTML, XML, CSS. (and lisp, but except comment code or string.) 
+
+In the future, this package will expand to also pretty-format. That is, from single long lines of code into multiple-lines with good choice of line-breaks and also indented, and skip line comments or string.
 
 home page at
 Emacs: Reformat Lines for Source Code
