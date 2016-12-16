@@ -1,9 +1,9 @@
 ;;; xah-reformat-code.el --- A efficient modal keybinding set minor mode based on ergonomics.
 
-;; Copyright © 2013-2015, by Xah Lee
+;; Copyright © 2013-2016, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; Created: 13 Dec 2016
 ;; Keywords: convenience
 ;; Homepage: http://ergoemacs.org/emacs/emacs_reformat_lines.html
@@ -18,19 +18,11 @@
 
 ;; xah-reformat-code contains commands to reformat current paragraph into 1 long line or multiple short lines.
 
-;; It is like emacs `fill-region', but designed for computer language source code.
+;; It is like emacs `fill-region', but designed for programing language source code.
 
-;; it contain command to strickly exchange spaces by newline, or vice versa.
+;; it contain commands to strickly exchange spaces by newline, or vice versa. No adding other char or removing other char.
 
-;; • Whitespace here is defined to be space, tab, and newline character.
-;; • Repeated whitespace is considered equivalent to just 1 space or just 1 newline char.
-;; • Whitespace is never created if it didn't exist before.
-;; • Whitespace is never removed.
-;; • No character other than whitespace are removed or inserted.
-
-;; this is suitable for languages that strickly consider whitespaces equivalent. For example, XML, HTML, CSS. (lisp too If line comment and string are skipped.)
-
-;; in the future, this package will expand to complete reformat. That is, given a singe very loooooooong line of code, it will reformat it into multiple lines in a pretty way, with proper place to insert newline, proper indentation, and skipping comment line or string.
+;; this is suitable for languages that strickly consider whitespaces equivalent. For example, XML, HTML, CSS. (lisp too If line comment and string are skipped. TODO.)
 
 ;; --------------------------------------------------
 ;; MANUAL INSTALL
@@ -51,6 +43,14 @@
 ;; don't use this in Python code!
 
 ;; If you like this project, Buy Xah Emacs Tutorial http://ergoemacs.org/emacs/buy_xah_emacs_tutorial.html or make a donation. Thanks.
+
+;; • Whitespace here is defined to be space, tab, and newline character.
+;; • Repeated whitespace is considered equivalent to just 1 space or just 1 newline char.
+;; • Whitespace is never created if it didn't exist before.
+;; • Whitespace is never removed.
+;; • No character other than whitespace are removed or inserted.
+
+;; in the future, this package will expand to complete reformat. That is, given a singe very loooooooong line of code, it will reformat it into multiple lines in a pretty way, with proper place to insert newline, proper indentation, and skipping comment line or string.
 
 
 ;;; Code:
@@ -91,10 +91,10 @@ Version 2016-12-13"
     (progn
       (if -compact-p
           (xah-reformat-to-multi-lines-region -p1 -p2)
-        (xah-replace-whitespaces-to-one-space -p1 -p2))
+        (xah-reformat-whitespaces-to-one-space -p1 -p2))
       (put this-command 'compact-p (not -compact-p)))))
 
-(defun xah-replace-whitespaces-to-one-space (*begin *end)
+(defun xah-reformat-whitespaces-to-one-space (*begin *end)
   "Replace whitespaces by one space.
 URL `http://ergoemacs.org/emacs/emacs_reformat_lines.html'
 Version 2016-12-13"
