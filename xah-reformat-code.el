@@ -1,4 +1,4 @@
-;;; xah-reformat-code.el --- A efficient modal keybinding set minor mode based on ergonomics.
+;;; xah-reformat-code.el --- commands to reformat source code.
 
 ;; Copyright © 2013-2016, by Xah Lee
 
@@ -20,9 +20,16 @@
 
 ;; It is like emacs `fill-region', but designed for programing language source code.
 
-;; it contain commands to strickly exchange spaces by newline, or vice versa. No adding other char or removing other char.
+;; it contain commands to strickly exchange whatespaces by newline, or vice versa. No adding other char or removing other char.
 
-;; this is suitable for languages that strickly consider whitespaces equivalent. For example, XML, HTML, CSS. (lisp too If line comment and string are skipped. TODO.)
+;; this is suitable for languages that strickly consider whitespaces equivalent except in string or comment. For example, XML, HTML, CSS, lisp, Wolfram Language.
+
+;; 2016-12-16 todo: 
+;; • auto skip strings and comments.
+;; • cut lines at the proper logical locations, not just around 70 char.
+;; • do proper indentation when changing to multi-line.
+;; • cater to different languages. e.g. lisp, JavaScript, ruby, php, Java, etc.
+;; • add commands to work on buffer, file, or all files in a directory.
 
 ;; --------------------------------------------------
 ;; MANUAL INSTALL
