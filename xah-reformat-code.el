@@ -3,7 +3,7 @@
 ;; Copyright © 2013-2016, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 1.0.1
+;; Version: 1.0.2
 ;; Created: 13 Dec 2016
 ;; Keywords: convenience
 ;; Homepage: http://ergoemacs.org/emacs/emacs_reformat_lines.html
@@ -20,11 +20,11 @@
 
 ;; It is like emacs `fill-region', but designed for programing language source code.
 
-;; it contain commands to strickly exchange whatespaces by newline, or vice versa. No adding other char or removing other char.
+;; it contain commands to strictly exchange whitespaces by newline, or vice versa. No adding other char or removing other char.
 
-;; this is suitable for languages that strickly consider whitespaces equivalent except in string or comment. For example, XML, HTML, CSS, lisp, Wolfram Language.
+;; this is suitable for languages that strictly consider whitespaces equivalent except in string or comment. For example, XML, HTML, CSS, lisp, Wolfram Language.
 
-;; 2016-12-16 todo: 
+;; 2016-12-16 todo:
 ;; • auto skip strings and comments.
 ;; • cut lines at the proper logical locations, not just around 70 char.
 ;; • do proper indentation when changing to multi-line.

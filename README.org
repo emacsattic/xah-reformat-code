@@ -1,4 +1,4 @@
-Emacs commands to reformat current text-block into single line or multiple lines. (similar to fill-region, but strickly exchange spaces with newline, or vice versa.)
+Emacs commands to reformat current text-block into single line or multiple lines. (similar to fill-region, but strictly exchange spaces with newline, or vice versa.)
 
 This is useful for languages that consider whitespace equivalent. For example, HTML, XML, CSS. (and lisp, but except comment code or string.) 
 
