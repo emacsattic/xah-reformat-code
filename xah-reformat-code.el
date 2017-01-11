@@ -1,9 +1,9 @@
 ;;; xah-reformat-code.el --- commands to reformat source code.
 
-;; Copyright © 2013-2016, by Xah Lee
+;; Copyright © 2013-2017, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 1.0.2
+;; Version: 1.0.3
 ;; Created: 13 Dec 2016
 ;; Keywords: convenience
 ;; Homepage: http://ergoemacs.org/emacs/emacs_reformat_lines.html
@@ -65,13 +65,13 @@
 ;;;###autoload
 (defun xah-reformat-lines ()
   "Reformat current text block into 1 long line or multiple short lines.
-When there is a text selection, act on the the selection, else, act on a text block separated by blank lines.
+When there is a text selection, act on the selection, else, act on a text block separated by blank lines.
 
 When the command is called for the first time, it checks the current line's length to decide to go into 1 line or multiple lines. If current line is short, it'll reformat to 1 long lines. And vice versa.
 
 Repeated call toggles between formatting to 1 long line and multiple lines.
 URL `http://ergoemacs.org/emacs/emacs_reformat_lines.html'
-Version 2016-12-13"
+Version 2017-01-08"
   (interactive)
   ;; This command symbol has a property “'compact-p”, the possible values are t and nil. This property is used to easily determine whether to compact or uncompact, when this command is called again
   (let (
@@ -104,22 +104,22 @@ Version 2016-12-13"
 (defun xah-reformat-whitespaces-to-one-space (*begin *end)
   "Replace whitespaces by one space.
 URL `http://ergoemacs.org/emacs/emacs_reformat_lines.html'
-Version 2016-12-13"
+Version 2017-01-11"
   (interactive "r")
   (save-excursion
     (save-restriction
       (narrow-to-region *begin *end)
       (goto-char (point-min))
       (while
-          (search-forward "\n" nil 'NOERROR)
+          (search-forward "\n" nil "NOERROR")
         (replace-match " "))
       (goto-char (point-min))
       (while
-          (search-forward "\t" nil 'NOERROR)
+          (search-forward "\t" nil "NOERROR")
         (replace-match " "))
       (goto-char (point-min))
       (while
-          (search-forward-regexp "  +" nil 'NOERROR)
+          (search-forward-regexp "  +" nil "NOERROR")
         (replace-match " ")))))
 
 (defun xah-reformat-to-multi-lines-region (*begin *end)
@@ -131,7 +131,7 @@ Version 2016-12-13"
     (narrow-to-region *begin *end)
     (goto-char (point-min))
     (while
-        (search-forward " " nil 'NOERROR)
+        (search-forward " " nil "NOERROR")
       (when (> (- (point) (line-beginning-position)) fill-column)
         (replace-match "\n" )))))
 
