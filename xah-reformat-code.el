@@ -3,7 +3,7 @@
 ;; Copyright © 2013-2017, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 1.1.0
+;; Version: 1.1.20170820
 ;; Created: 13 Dec 2016
 ;; Keywords: convenience
 ;; Homepage: http://ergoemacs.org/emacs/emacs_reformat_lines.html
@@ -12,7 +12,7 @@
 
 ;;; License:
 
-;; You can redistribute this program and/or modify it under the terms of the GNU General Public License version 2.
+;; You can redistribute this program and/or modify it under the terms of the GNU General Public License version 3.
 
 ;;; Commentary:
 
