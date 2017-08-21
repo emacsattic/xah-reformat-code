@@ -6,13 +6,10 @@
 ;; Version: 1.1.20170820
 ;; Created: 13 Dec 2016
 ;; Keywords: convenience
+;; License: GPL v3
 ;; Homepage: http://ergoemacs.org/emacs/emacs_reformat_lines.html
 
 ;; This file is not part of GNU Emacs.
-
-;;; License:
-
-;; You can redistribute this program and/or modify it under the terms of the GNU General Public License version 3.
 
 ;;; Commentary:
 
